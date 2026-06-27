@@ -2,6 +2,10 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import RidePlatform from "./service-selection/ride";
+import FoodPlatform from "./service-selection/food";
+import ParcelPlatform from "./service-selection/parcel";
+import PrintingPlatform from "./service-selection/printing";
 
 export default function Home() {
   const router = useRouter();
