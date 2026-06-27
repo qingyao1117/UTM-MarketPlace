@@ -1,0 +1,49 @@
+{
+  "name": "utm-student-marketplace-infrastructure",
+  "version": "1.0.0",
+  "description": "AWS CDK Infrastructure-as-Code for UTM Student Marketplace",
+  "main": "lib/app.ts",
+  "scripts": {
+    "build": "tsc",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy --all",
+    "deploy:dynamodb": "cdk deploy UTMMarketplaceDynamoDBStack",
+    "deploy:s3": "cdk deploy UTMMarketplaceS3Stack",
+    "deploy:cognito": "cdk deploy UTMMarketplaceCognitoStack",
+    "deploy:api-gateway": "cdk deploy UTMMarketplaceAPIGatewayStack",
+    "deploy:core": "cdk deploy UTMMarketplaceDynamoDBStack UTMMarketplaceS3Stack UTMMarketplaceCognitoStack",
+    "destroy": "cdk destroy --all",
+    "destroy:dynamodb": "cdk destroy UTMMarketplaceDynamoDBStack",
+    "destroy:s3": "cdk destroy UTMMarketplaceS3Stack",
+    "destroy:cognito": "cdk destroy UTMMarketplaceCognitoStack",
+    "destroy:api-gateway": "cdk destroy UTMMarketplaceAPIGatewayStack",
+    "diff": "cdk diff",
+    "ls": "cdk ls",
+    "clean": "rm -rf dist cdk.out"
+  },
+  "dependencies": {
+      "aws-cdk-lib": "^2.100.0",
+      "constructs": "^10.0.0",
+      "@aws-sdk/client-cognito-identity-provider": "^3.0.0"
+  },
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": "18.x || 20.x"
+  },
+  "keywords": [
+    "aws",
+    "cdk",
+    "infrastructure",
+    "dynamodb",
+    "s3",
+    "cognito",
+    "utm",
+    "marketplace"
+  ],
+  "author": "",
+  "license": "MIT"
+}
